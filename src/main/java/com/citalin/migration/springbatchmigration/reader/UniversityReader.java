@@ -24,7 +24,7 @@ public class UniversityReader {
 		
 		studentReader.setDataSource(universityDataOrigin);
 		
-		studentReader.setSql("SELECT id, first_name as firstName, last_name as lastName, email, dept_id as departmentId, is_active as isActive \r\n"
+		studentReader.setSql("SELECT id, first_name as firstName, last_name as lastName, email, is_active as active, dept_id as departmentId\r\n"
 				+ "	FROM public.student;");
 		
 		studentReader.setRowMapper(new BeanPropertyRowMapper<StudentPostgre>() {
@@ -32,6 +32,9 @@ public class UniversityReader {
 				setMappedClass(StudentPostgre.class);
 			}
 		});
+		
+		//studentReader.setMaxRows(20);
+		studentReader.setCurrentItemCount(10);
 		
 		return studentReader;
 	}

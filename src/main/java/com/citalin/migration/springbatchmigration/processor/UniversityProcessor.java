@@ -11,13 +11,13 @@ public class UniversityProcessor implements ItemProcessor<StudentPostgre, Studen
 
 	@Override
 	public StudentMysql process(StudentPostgre item) throws Exception {
-		System.out.println("Inside itemp processor");
+	//	System.out.println("Inside postgres item : " + item.toString());
 		StudentMysql studentMysql = new StudentMysql();
 		studentMysql.setId(item.getId());
 		studentMysql.setFirstName(item.getFirstName());
 		studentMysql.setLastName(item.getLastName());
 		studentMysql.setEmail(item.getEmail());
-		studentMysql.setActive(item.isActive());
+		studentMysql.setActive(Boolean.parseBoolean(item.getActive()));
 		studentMysql.setDepartmentId(item.getDepartmentId());		
 		return studentMysql;
 	}

@@ -20,7 +20,7 @@ public class DatabaseConfig {
 	}
 	
 	@Bean
-	@ConfigurationProperties(prefix = "spring.universitydatasource")
+	@ConfigurationProperties(prefix = "spring.universitydatadestiny")
 	public DataSource universityDataDestiny()
 	{
 		return DataSourceBuilder.create().build();

@@ -49,9 +49,9 @@ public class MigrationJob {
 	{
 		return stepBuilderFactory.get("migrationStep")
 				.<StudentPostgre,StudentMysql>chunk(10)
-				.reader(universityReader.studentReader())
+				.reader(universityReader.studentReader())				
 				.processor(universityProcessor)
-				.writer(universityWriter)
+				.writer(universityWriter.writeToMySqlPreparedStatement())				
 				.build();
 			
 	}

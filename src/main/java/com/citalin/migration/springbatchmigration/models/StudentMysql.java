@@ -2,7 +2,7 @@ package com.citalin.migration.springbatchmigration.models;
 
 public class StudentMysql {
 	
-private int id;
+	private int id;
 	
 	private String firstName;
 	
@@ -12,7 +12,7 @@ private int id;
 	
 	private int departmentId;
 	
-	private boolean isActive;
+	private boolean active;
 	
 	
 	public StudentMysql()
@@ -71,20 +71,20 @@ private int id;
 	}
 
 
-	public boolean isActive() {
-		return isActive;
+	public boolean getActive() {
+		return active;
 	}
 
 
 	public void setActive(boolean isActive) {
-		this.isActive = isActive;
+		this.active = isActive;
 	}
 
 
 	@Override
 	public String toString() {
 		return "StudentPostgre [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email
-				+ ", departmentId=" + departmentId + ", isActive=" + isActive + "]";
+				+ ", departmentId=" + departmentId + ", isActive=" + active + "]";
 	}
 
 }

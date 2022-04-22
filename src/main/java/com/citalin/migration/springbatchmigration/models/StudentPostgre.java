@@ -12,7 +12,7 @@ public class StudentPostgre {
 	
 	private int departmentId;
 	
-	private boolean isActive;
+	private String active;
 	
 	
 	public StudentPostgre()
@@ -71,20 +71,20 @@ public class StudentPostgre {
 	}
 
 
-	public boolean isActive() {
-		return isActive;
+	public String getActive() {
+		return active;
 	}
 
 
-	public void setActive(boolean isActive) {
-		this.isActive = isActive;
+	public void setActive(String isActive) {
+		this.active = isActive;
 	}
 
 
 	@Override
 	public String toString() {
 		return "StudentPostgre [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email
-				+ ", departmentId=" + departmentId + ", isActive=" + isActive + "]";
+				+ ", departmentId=" + departmentId + ", isActive=" + active + "]";
 	}
 	
 	
